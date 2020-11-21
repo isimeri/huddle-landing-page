@@ -12,30 +12,42 @@ body{
     height: 70vh;
     width: 70vw;
     margin: 10vh auto;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 .main-container{
+    grid-row: 2/4;
+    grid-column: 2/3;
+    margin-left: 5%;
     display: flex;
-    width: 40%;
+    width: 85%;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     color: white;
 }
+.logo{
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 30%;
+}
 .illustration-svg{
-    width: 45%;
-    height: 60%;
+    grid-column: 1/2;
+    grid-row: 2/5;
+    width: 85%;
+    height: 77%;
+    margin-left: 10%;
 }
 .big-header{
-    width: 80%;
+    width: 90%;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     margin: 1rem 0;
 }
 .description{
     font-family: "Open Sans", sans-serif;
+    color: rgba(255, 255, 255, 0.8);
     margin: 0.5rem 0 1rem 0;
 }
 .register-button{
@@ -54,8 +66,28 @@ body{
     color: white;
     background: hsl(300, 69%, 71%);
 }
+.social{
+    padding: 10%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
 .social-button{
-    padding: 0.3rem 0.5rem;
+    height: 36px;
+    width: 36px;
+    margin: 0.6rem;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    border: 1px solid white;
+    text-align: center;
+    vertical-align: center;
     border-radius: 50%;
-    border: 1px solid black;
+    transition: all 0.3s ease;
+}
+.social-button:hover{
+    cursor: pointer;
+    color: hsl(300, 69%, 71%);
+    border-color: hsl(300, 69%, 71%);
 }
